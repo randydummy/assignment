@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiples of 3</title>
+</head>
+<body>
+    <h2>First 5 Multiples of 3</h2>
+
+    <button onclick="printMultiples()">Show Multiples</button>
+    <ul id="multiplesList"></ul>
+
+    <script>
+        function printMultiples() {
+            let count = 1;
+            let multiple = 3;
+            const list = document.getElementById('multiplesList');
+            list.innerHTML = ''; // Clear previous output
+
+            while (count <= 5) {
+                let result = multiple * count;
+                let listItem = document.createElement('li');
+                listItem.textContent = result;
+                list.appendChild(listItem);
+                count++;
+            }
+        }
+    </script>
+</body>
+</html>
